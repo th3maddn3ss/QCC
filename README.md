@@ -20,10 +20,10 @@ This model:
 
 ## 📂 Contents
 
-- `qcc_theory.tex` — Full LaTeX document defining the QCC model
-- `data/` — Folder for Planck PCCS, KiDS, DR9Q, Pantheon+, and GWTC datasets
+- `QCC Theory.tex` — Full LaTeX document defining the QCC model
+- `Datasets/` — Folder for Planck PCCS, KiDS, DR9Q, Pantheon+, and GWTC datasets
 - `plots/` — Validation figures: φ(z) overlays, RMS scatter, harmonic coherence
-- `scripts/` — Python notebooks and tools for preprocessing, FFT, wavelet generation, and RMS computation
+- `Codebase/` — Python notebooks and tools for preprocessing, FFT, wavelet generation, and RMS computation
 
 ---
 
