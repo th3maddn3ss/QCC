@@ -22,12 +22,13 @@ Quantum Coherence Cosmology (QCC) is a cosmological model that replaces dark mat
 
 ```plaintext
 QCC Repository/
-├── Codebase/               # Python notebooks and tools for processing QCC φ-field
-├── Datasets/               # All cleaned cosmological datasets
-├── COM_PCCS_030_R2.04.txt  # Planck 030 GHz compact source catalog
-├── LICENSE                 # BSD 3-Clause License
-├── QCC Theory.tex          # Complete LaTeX document of the QCC model
-└── README.md               # Project overview and full theory log
+├── Codebase/                         # Python notebooks and tools for processing QCC φ-field
+├── Datasets/                         # All cleaned cosmological datasets
+├── Older versions and Checkpoints/   # Dedicated folder for version history
+├── COM_PCCS_030_R2.04.txt            # Planck 030 GHz compact source catalog
+├── LICENSE                           # BSD 3-Clause License
+├── QCC_V2_Theory_Preprint.tex        # Complete LaTeX document of the QCC model
+└── README.md                         # Project overview and full theory log
 ```
 
 ---
