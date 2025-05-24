@@ -1,0 +1,112 @@
+
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Quantum Coherence Cosmology (QCC):\\
+Full $\phi(z, \tau)$ Field Lagrangian and Model Evolution}
+\author{Devin Lavrisha \\ \small{with AI research assistance by ChatGPT}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Model History and Evolution}
+
+Quantum Coherence Cosmology (QCC) originated from attempts to resolve the inconsistencies in the $\Lambda$CDM model—specifically the unexplained nature of dark matter and dark energy. Originally dubbed Link Density Gravity (LDG), the model hypothesized that quantum coherence effects at cosmological scales could account for missing mass-energy components without invoking exotic particles or a cosmological constant.
+
+This framework evolved into QCC through:
+\begin{itemize}
+    \item Extraction of coherence structure directly from the Cosmic Microwave Background (CMB) TT spectrum.
+    \item Identification of coherence \textit{wells} and \textit{geysers} as drivers of redshift, structure, and lensing.
+    \item Construction of a scalar field $\phi(z)$ via Gaussian wavelet reconstruction using ACT and Planck data.
+    \item Transition to a dynamic field $\phi(z, \tau)$ to capture echo propagation, causal memory, and time evolution.
+    \item Validation using datasets: Pantheon+ (SNe), KiDS (weak lensing), DR9Q (quasar density), BAO (baryon acoustic oscillations), and GWTC (gravitational wave catalogs).
+\end{itemize}
+
+\section{Scalar Coherence Field: $\phi(z, \tau)$}
+
+The coherence field $\phi(z, \tau)$ represents quantum memory encoded in the geometry of the early universe. It is a scalar field whose static form $\phi(z)$ was derived from CMB spectral peaks and troughs. Its dynamic extension includes temporal evolution and causality kernels.
+
+\subsection{Redshift Mapping}
+
+Wavelet harmonic mode $\ell$ is mapped to redshift using:
+\[
+z(\ell) = \frac{1100}{\ell + \epsilon}
+\]
+with $\epsilon$ a small offset calibrated from BAO–CMB alignment.
+
+\subsection{Canonical Coherence Field Form}
+
+Static $\phi(z)$ form:
+\[
+\phi(z) = \sum_{i} A_i \exp\left(-\frac{(z - z_i)^2}{2\sigma_i^2}\right)
+\]
+where $A_i$, $z_i$, and $\sigma_i$ are derived from the CMB TT spectrum (ACT DR4.01).
+
+\subsection{Dynamic Field $\phi(z, \tau)$}
+
+The dynamic field evolves as:
+\[
+\frac{\partial^2 \phi}{\partial \tau^2} - c_\phi^2 \frac{\partial^2 \phi}{\partial z^2} + \Gamma \frac{\partial \phi}{\partial \tau} + V'(\phi) = J(z, \tau)
+\]
+with:
+\begin{itemize}
+    \item $c_\phi$: speed of coherence propagation
+    \item $\Gamma$: coherence damping rate
+    \item $V(\phi)$: potential governing stability (typically a double-well or Gaussian memory well)
+    \item $J(z, \tau)$: source terms from matter-energy interactions
+\end{itemize}
+
+\section{QCC Lagrangian Density}
+
+The full Lagrangian for $\phi(z, \tau)$ in redshift-time space:
+
+\[
+\mathcal{L}_\phi = \frac{1}{2} \left( \frac{\partial \phi}{\partial \tau} \right)^2 
+- \frac{1}{2} c_\phi^2 \left( \frac{\partial \phi}{\partial z} \right)^2 
+- V(\phi) + \phi \cdot S(z, \tau)
+\]
+
+Where $S(z, \tau)$ is the source field encoding environmental interaction (mass density, lensing, energy release).
+
+\section{Dataset-Specific Couplings}
+
+\subsection*{Pantheon+:}
+\[
+\mu(z) \sim 5 \log_{10} \left[d_L(z, \phi)\right] + \text{const}
+\]
+
+\subsection*{DR9Q:}
+\[
+\rho_{\text{QSO}}(z) \sim -\frac{d\phi}{dz}
+\]
+
+\subsection*{KiDS:}
+\[
+\xi_+(z) \sim \phi(z)^2 \cdot W(z)
+\]
+
+\subsection*{BAO:}
+\[
+\Delta z_{\text{BAO}} \sim \delta\phi(z) \cdot \delta H(z)
+\]
+
+\subsection*{GWTC:}
+\[
+N_{\text{GW}}(z) \sim \left|\frac{d^2\phi}{dz^2}\right|
+\]
+
+\section{Coherence Causality and Future Work}
+
+QCC now serves as a full-field cosmological framework. The next steps include:
+\begin{itemize}
+    \item Verifying quantum vacuum phenomena (Unruh, Casimir, Lamb shift) within $\phi$ field structure.
+    \item Embedding microcausal structure and spontaneous emission rules in coherence domain.
+    \item Deriving particle behavior as emergent from $\phi(z, \tau)$ ripples and well boundaries.
+    \item Creating experimental validations via lensing analogs and field-driven energy modulation.
+\end{itemize}
+
+\end{document}

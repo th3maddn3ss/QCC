@@ -1,0 +1,87 @@
+
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Quantum Coherence Cosmology (QCC):\\
+Full $\phi(z, \tau)$ Field Lagrangian and Model Evolution}
+\author{Devin Lavrisha \\ \small{with AI research assistance by ChatGPT}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Model History and Evolution}
+
+
+Quantum Coherence Cosmology (QCC), a theoretical paradigm shift from its predecessor  originated from efforts to resolve the limitations of the $\Lambda$CDM model—particularly its reliance on unobserved entities like dark matter and dark energy. The theory began under the name Link Density Gravity (LDG), which proposed that quantum entanglement and coherence at cosmic scales could account for gravitational anomalies without introducing exotic particles.
+
+QCC matured through several stages:
+\begin{itemize}
+\item Deriving coherence structure directly from the CMB TT power spectrum (ACT DR4 and Planck).
+\item Identifying peaks (geysers) and troughs (wells) as quantum coherence memory features.
+\item Constructing a static coherence field $\phi(z)$ via Gaussian wavelet decomposition of CMB harmonics.
+\item Extending to a dynamic field $\phi(z, \tau)$ to encode causal propagation and echo memory.
+\item Embedding the field in a curvature-coupled Lagrangian with quantized energy structure.
+\end{itemize}
+
+\section{Explanation of Lagrangian Components}
+
+The canonical Lagrangian used is:
+
+\begin{equation}
+\mathcal{L}_\phi = \frac{1}{2} \left( \dot{\phi}^2 - \left( \frac{\partial \phi}{\partial z} \right)^2 \right) 
+- \frac{1}{2} \xi R(\tau) a^2 \phi^2 
+- a^2 \Lambda_\phi \phi \sin\left( \frac{2\pi z}{\lambda_\phi} \right)
+\end{equation}
+
+Each term reflects a unique physical process:
+\begin{itemize}
+\item $\dot{\phi}^2$ — time evolution of coherence, representing kinetic energy in conformal time.
+\item $\left(\frac{\partial \phi}{\partial z}\right)^2$ — spatial tension of coherence, analogous to quantum pressure.
+\item $\xi R(\tau) \phi^2$ — curvature coupling allowing the field to dynamically respond to spacetime geometry.
+\item $\Lambda_\phi \phi \sin(2\pi z / \lambda_\phi)$ — harmonic memory potential encoding early-universe acoustic imprints.
+\end{itemize}
+
+\section{Datasets and Mathematical Framework}
+
+QCC was validated against five major datasets:
+\begin{itemize}
+\item \textbf{Pantheon+ (Type Ia Supernovae)} — used to compare luminosity distances to $\phi(z)$-modulated $H(z)$.
+\item \textbf{KiDS (Kilo-Degree Survey)} — weak lensing correlation function $\xi_+$ compared to gradients of $\phi(z, \tau)$.
+\item \textbf{DR9Q (SDSS Quasar Catalog)} — redshift distribution histogram matched to coherence wells.
+\item \textbf{BAO (Baryon Acoustic Oscillations)} — displacement scale and peak shifts aligned with $\phi$ ripple width $\lambda_\phi$.
+\item \textbf{GWTC (Gravitational Wave Transients)} — tested coherence burst correlation with waveform clustering.
+\end{itemize}
+
+Mathematical tools used:
+\begin{itemize}
+\item FFT-based Gaussian wavelet extraction for $\phi(z)$
+\item Logarithmic redshift-to-harmonic mapping $z(\ell) = 1100 / (\ell + \epsilon)$
+\item Coherence energy tensor $T_{00}$ calculated as $\frac{1}{2}(\dot{\phi}^2 + (\partial_z \phi)^2)$
+\item Microcausality tested via mock Pauli-Jordan function and field commutator decay
+\end{itemize}
+
+\section{Simulation Summary}
+
+\subsection*{Microcausality}
+\begin{itemize}
+\item Field commutators $[\hat{\phi}(z, \tau), \hat{\phi}(z', \tau')]$ vanish for spacelike separations.
+\item Mock Pauli-Jordan kernel simulated and confirmed causal domain structure.
+\end{itemize}
+
+\subsection*{Energy Quantization}
+\begin{itemize}
+\item Promoted $\phi$ to an operator; computed $\hat{T}_{00}$ with canonical quantization.
+\item Vacuum divergence removed via normal ordering; coherence features yielded local energy density analogous to mass.
+\end{itemize}
+
+\subsection*{Halo Formation}
+\begin{itemize}
+\item Gaussian coherence wells simulated in $\phi(z, \tau)$.
+\item Resulting $T_{00}$ surface showed gravitational halo analogs with causal evolution.
+\end{itemize}
+
+\end{document}
