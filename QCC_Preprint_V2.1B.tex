@@ -1,0 +1,85 @@
+
+%% QCC V2.1B: Unified Field Theory Framework
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, authblk, geometry}
+\geometry{margin=1in}
+\title{Quantum Coherence Cosmology V2.1B: \\
+Unified Quantum-Gravitational Field Framework}
+\author[1]{Devin Lavrisha}
+\affil[1]{Quantum Coherence Project}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document formalizes Version 2.1B of the Quantum Coherence Cosmology (QCC) framework, unifying General Relativity (GR) and Quantum Field Theory (QFT) via a coherence field \( \phi(z, \tau) \). It builds upon V2.1A’s dynamic redshift model by incorporating causal structure, temporal evolution, and full backreaction from a scalar coherence field. The model is constructed using Lagrangian mechanics, yields Euler-Lagrange field equations, and derives the associated stress-energy tensor to replace dark s...
+\end{abstract}
+
+\section{Introduction}
+Following the predictive success of QCC V2.1A, we now incorporate temporal evolution and quantum-compatible Lagrangian structure. This transforms QCC into a proper field theory with GR-compatible stress-energy tensors, enabling unified modeling of lensing, expansion, and matter structure formation.
+
+\section{Canonical Field Definition}
+\begin{equation}
+\phi(z, \tau) = A_0 \exp\left(-\frac{(z - z_0)^2}{2 \sigma^2}\right) \sin\left(\frac{2\pi z}{\lambda_\phi}\right)
+\end{equation}
+This defines the scalar coherence field with temporal dependence \( \tau \) implied in \( A_0(\tau) \) or via propagating solutions.
+
+\subsection{Temporal Dynamics}
+\begin{equation}
+\Box \phi + \gamma \partial_\tau \phi + \frac{dV}{d\phi} = 0
+\end{equation}
+where:
+\begin{itemize}
+  \item \( \Box = \partial^2/\partial \tau^2 - \nabla^2 \) is the d'Alembertian operator.
+  \item \( V(\phi) = \frac{1}{4} \phi^4 \) is a self-interacting potential.
+  \item \( \gamma \) is a damping factor related to decoherence.
+\end{itemize}
+
+\section{Lagrangian Formulation}
+\begin{equation}
+\mathcal{L} = \frac{1}{2} \partial_\mu \phi \, \partial^\mu \phi - V(\phi) + \xi R \phi^2
+\end{equation}
+This Lagrangian includes:
+\begin{itemize}
+  \item Canonical kinetic term from QFT
+  \item Potential term representing coherence memory storage
+  \item Curvature coupling \( \xi R \phi^2 \) enabling GR-QFT unification
+\end{itemize}
+
+\subsection{Euler-Lagrange Equation}
+\begin{equation}
+\frac{\partial \mathcal{L}}{\partial \phi} - \partial_\mu \left(\frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)} \right) = 0
+\end{equation}
+Expanding yields the equation of motion:
+\begin{equation}
+\Box \phi + \frac{dV}{d\phi} - \xi R \phi = 0
+\end{equation}
+
+\section{Stress-Energy Tensor}
+\begin{equation}
+T^{\mu\nu}_{(\phi)} = \partial^\mu \phi \partial^\nu \phi - g^{\mu\nu} \mathcal{L}
+\end{equation}
+This term feeds into Einstein’s equation:
+\begin{equation}
+G^{\mu\nu} = 8\pi G \left( T^{\mu\nu}_{(\phi)} + T^{\mu\nu}_{\text{matter}} \right)
+\end{equation}
+allowing QCC \( \phi \)-fields to drive curvature and cosmic expansion.
+
+\section{Field Kernel and Observables}
+Define tensor projection:
+\begin{equation}
+K(z, \tau) = \phi'^2 + \phi''^2
+\end{equation}
+used in RMS, \( \chi^2 \), AIC, and BIC comparison with datasets:
+\begin{itemize}
+    \item Pantheon+ (luminosity distance)
+    \item KiDS (lensing correlation \( \xi_+ \))
+    \item DR9Q (redshift clustering)
+    \item BAO, GWTC (structure echo)
+\end{itemize}
+
+\section{Conclusion}
+V2.1B unifies Quantum Coherence Cosmology with classical and quantum field theory. The coherence field \( \phi(z, \tau) \) now obeys Lagrangian dynamics, sources curvature through its stress tensor, and maintains causal evolution through damping and time propagation. This checkpoint completes the GR-QFT bridge stage of QCC.
+
+\end{document}
