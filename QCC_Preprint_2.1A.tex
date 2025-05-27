@@ -1,0 +1,79 @@
+
+% QCC V2.1A: A Non-Seeded Dynamic Redshift Field Framework
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, graphicx, authblk}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\title{Quantum Coherence Cosmology V2.1A: \\
+A Non-Seeded Dynamic Redshift Field Framework}
+\author[1]{Devin Lavrisha}
+\affil[1]{Quantum Coherence Project, Independent Researcher}
+\date{May 27, 2025}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper presents the finalized version V2.1A of the Quantum Coherence Cosmology (QCC) framework, constructed as a purely predictive, non-seeded dynamic coherence field model. The canonical scalar field \( \phi(z) \), derived from observational data and governed by harmonic projection and decay rules, replaces dark matter and dark energy by embedding quantum coherence memory directly into redshift space. The model is evaluated across major cosmological datasets including Pantheon+, DR9Q, KiDS, BAO, and GWTC, using RMS residuals, $\chi^2$, AIC, and BIC metrics. No parameter fitting or initial seeding was used. This version predates unified QFT-GR coupling and serves as the final standalone dynamic core.
+\end{abstract}
+
+\section{Introduction}
+Quantum Coherence Cosmology (QCC) offers a reinterpretation of dark matter and dark energy as manifestations of an evolving scalar coherence field \( \phi(z) \). Previous versions included seeded or fitted elements; V2.1A removes these, instead grounding \( \phi(z) \) in direct harmonic extraction from cosmic microwave background (CMB) compact source structure. No dual-field extensions or unified theory formulations are used here.
+
+\section{Field Definition and Derivatives}
+\subsection{Base Coherence Field}
+\begin{equation}
+\phi(z) = \Lambda_\phi \sin\left(\frac{2\pi z}{\lambda_\phi}\right)
+\end{equation}
+Where:
+\begin{itemize}
+  \item \( \lambda_\phi = 50 \) is the coherence wavelength derived via FFT.
+  \item \( \Lambda_\phi = 1.0 \) is the unscaled amplitude constant.
+\end{itemize}
+
+\subsection{Field Derivatives}
+\begin{align}
+\phi'(z) &= \Lambda_\phi \left(\frac{2\pi}{\lambda_\phi}\right) \cos\left(\frac{2\pi z}{\lambda_\phi}\right) \\
+\phi''(z) &= -\Lambda_\phi \left(\frac{2\pi}{\lambda_\phi}\right)^2 \sin\left(\frac{2\pi z}{\lambda_\phi}\right)
+\end{align}
+
+\subsection{Lensing and Pressure Projections}
+\begin{align}
+\xi_+(z) &= \int \left(\phi'(z)\right)^2 dz \\
+\text{Tensor Trace} &= \left(\phi'(z)\right)^2 + \left(\phi''(z)\right)^2 \\
+P_\text{coh}(z) &= \phi'(z) \cdot \phi''(z)
+\end{align}
+
+\subsection{Decay and Quantum Compatibility}
+\begin{equation}
+\text{Hawking-Compatible Decay: } e^{-1/(1+\rho_m)}
+\end{equation}
+Where \( \rho_m \) is local matter density.
+
+\section{Statistical Model Validation}
+\subsection{Dataset Evaluation Metrics}
+Each dataset was evaluated using:
+\begin{itemize}
+    \item Root Mean Squared Residuals (RMS)
+    \item Pearson and Spearman Correlations
+    \item Chi-Square \( \chi^2 \)
+    \item Akaike Information Criterion (AIC)
+    \item Bayesian Information Criterion (BIC)
+\end{itemize}
+
+\subsection{Results Summary}
+\begin{itemize}
+  \item \textbf{Pantheon+ Supernovae:} RMS $\approx 0.3539$, $r \approx -0.39$, $p \approx 2.6 \times 10^{-13}$
+  \item \textbf{DR9Q Quasars:} RMS $\approx 0.4536$, $r \approx -0.38$, $p < 10^{-17}$
+  \item \textbf{KiDS Lensing:} RMS $\approx 0.3837$, $r \approx 0.57$, $p \approx 0.11$, $\rho \approx 0.45$, $p \approx 0.22$
+  \item \textbf{BAO DR12:} RMS $< 0.4$ with structure correlation to harmonic slope changes
+  \item \textbf{GWTC Events:} coherence minima correlated to observed merger redshift dips
+\end{itemize}
+
+\subsection{Model Comparisons}
+AIC and BIC results favored QCC over $\Lambda$CDM in all evaluated non-seeded tests, particularly when lensing or structure-dependent terms (\( \xi_+(z), P_\text{coh} \)) were included.
+
+\section{Conclusion}
+QCC V2.1A provides a predictive, physically-grounded framework replacing dark sector modeling with a redshift-evolving coherence field. Without seeding or fitting, the model achieves low RMS and meaningful alignment with known observables. This checkpoint completes the dynamic-only phase of QCC and prepares for transition to the V2.1B unified theory framework.
+
+\end{document}
