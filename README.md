@@ -25,9 +25,11 @@ QCC Repository/
 ├── Codebase/                         # Python notebooks and tools for processing QCC φ-field
 ├── Datasets/                         # All cleaned cosmological datasets
 ├── Older versions and Checkpoints/   # Dedicated folder for version history
+├── Plots/                            # Centralized spot for all plots and visual aids
 ├── COM_PCCS_030_R2.04.txt            # Planck 030 GHz compact source catalog
 ├── LICENSE                           # BSD 3-Clause License
-├── QCC_V2_Theory_Preprint.tex        # Complete LaTeX document of the QCC model
+├── QCC_Preprint_V2.1A.tex            # Complete current LaTeX document of the QCC model full dynamic core
+├── QCC_Preprint_V2.1B.tex            # Initial commit of LaTeX document for QCC unified field core (unstable)
 └── README.md                         # Project overview and full theory log
 ```
 
