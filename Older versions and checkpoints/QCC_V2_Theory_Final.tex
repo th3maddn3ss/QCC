@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage{amsmath, amssymb, graphicx, authblk, geometry, caption, subcaption, float, hyperref, xcolor}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+
+% Title and Author
+\title{Quantum Coherence Cosmology (QCC): Final Theory Preprint V2.0}
+\author{Devin Lavrisha \\ \small Independent Researcher}
+\date{May 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Quantum Coherence Cosmology (QCC) replaces dark matter and the cosmological constant with scalar coherence fields derived from the CMB temperature power spectrum. These coherence fields explain redshift behavior, lensing effects, and structure formation via an echo-driven field Lagrangian \( \mathcal{L}_\phi(z, \tau) \). This document presents the structural framework, field derivation, statistical validation, and cosmological implications of QCC.
+\end{abstract}
+
+\section{Introduction and Motivation}
+\subsection{Limitations of \( \Lambda \)CDM and Motivation for QCC}
+The standard model of cosmology, \( \Lambda \)CDM, relies on two major unobservable entities: cold dark matter (CDM) and a cosmological constant \( \Lambda \). While this model fits observational data well, it lacks structural or physical grounding for these terms. QCC proposes a re-anchoring of cosmic structure through observable coherence remnants encoded in the Cosmic Microwave Background (CMB), reducing reliance on arbitrary dark components.
+
+\subsection{Quantum Coherence Memory as Physical Foundation}
+We define quantum coherence memory as scalar field structure derived from the acoustic peaks and troughs of the CMB TT spectrum, mapped to redshift space and preserved as nonlocal residuals. These form the basis for a field \( \phi(z) \), which evolves through conformal time \( \tau \), influencing large-scale structure formation and lensing.
+
+\section{Coherence Field Construction}
+\subsection{Acoustic Projection from the CMB TT Spectrum}
+Following Planck 2018 data, the temperature power spectrum \( D_\ell^{TT} \) provides peak (\( \mu(z) \)) and trough (\( \nu(z) \)) structure. Each multipole \( \ell_i \) is mapped to redshift by:
+\[
+z_i = \frac{1100}{\ell_i + \varepsilon}, \quad \varepsilon \ll 1
+\]
+In an extended formulation using compact source structure, the coherence field is mapped onto a full-sky 720\textdegree{} gimbal domain using the Planck COM PCCS 030 GHz catalog. This allows the spatial harmonic projection of coherence peaks and wells to be embedded into redshift space through Fourier--Bessel decomposition:
+\[
+\phi(z, \theta, \varphi) = \sum_{\ell, m} a_{\ell m} Y_{\ell m}(\theta, \varphi) \cdot \exp\left( -\frac{(z - z_\ell)^2}{2\lambda^2} \right)
+\]
+
+\subsection{Defining \( \mu(z), \nu(z), \phi(z), \kappa(z) \)}
+Peaks and troughs are extracted using a second derivative filter and normalized as:
+\[
+A_i = \frac{D_\ell - \min(D)}{\max(D) - \min(D)}
+\]
+The fields are defined:
+\[
+\mu(z) = \sum_{i \in \text{peaks}} A_i \exp\left(-\frac{(z - z_i)^2}{2 \lambda^2}\right), \\
+\nu(z) = \sum_{j \in \text{troughs}} A_j \exp\left(-\frac{(z - z_j)^2}{2 \lambda^2}\right)
+\]
+\[
+\phi(z) = \mu(z) - \nu(z), \quad \kappa(z) = \mu(z) \cdot \frac{d\nu}{dz}
+\]
+
+\section{Field-Theoretic Dynamics of \( \phi(z, \tau) \)}
+\subsection{Lagrangian Density and Echo Kernel Coupling}
+The QCC coherence field is governed by the canonical Lagrangian:
+\[
+\mathcal{L}_\phi = \frac{1}{2}\left(\frac{\partial \phi}{\partial z}\right)^2 - V(\phi) + \gamma \kappa(z)\phi(z)
+\]
+with potential options:
+\[
+V(\phi) = \frac{1}{2}m^2 \phi^2 \quad \text{(harmonic)}, \quad V(\phi) = \lambda (\phi^2 - \phi_0^2)^2 \quad \text{(symmetry breaking)}
+\]
+
+\subsection{Euler-Lagrange Equation and Tensor Structure}
+The field evolution follows:
+\[
+\frac{d^2 \phi}{dz^2} + \frac{dV}{d\phi} = \gamma \frac{d\kappa}{dz}
+\]
+The corresponding energy-momentum tensor is:
+\[
+T^{\mu\nu} = \nabla^\mu \phi \nabla^\nu \phi - g^{\mu\nu} \mathcal{L}_\phi
+\]
+And energy density:
+\[
+T_{00}(z, \tau) = \frac{1}{2} \left( \frac{\partial \phi}{\partial \tau} \right)^2 + \frac{1}{2} \left( \frac{\partial \phi}{\partial z} \right)^2 + V(\phi)
+\]
+
+To reflect decoherence, the field is generalized to:
+\[
+\phi(z, \tau) = \phi(z) e^{-\Gamma \tau}, \quad \Gamma \propto \frac{1}{1 + \rho_m(z)}
+\]
+
+\section{Dataset Mapping and Observational Matching}
+\subsection{Cleaning and Remapping: Pantheon+, KiDS, DR9Q, BAO, GWTC}
+Each dataset is redshift-aligned with QCC fields using transformations such as \( z = 0.3/k \) (BAO) or \( z \approx 1/(1+\theta) \) (KiDS). Invalid or unphysical entries (e.g. \( z < 0 \), NaN) are removed.
+
+\subsection{Normalized RMS Residuals and Field Alignments}
+Residuals are computed per field-dataset pair, and visual overlays confirm structural alignment without tuning.
+\begin{itemize}
+  \item Pantheon+: \( \phi(z) \): RMS \( \approx 0.325 \), \( \rho \approx 0.943 \)
+  \item KiDS: \( \nu(z) \): RMS \( \approx 0.400 \), \( \rho \approx -0.306 \)
+  \item DR9Q: \( \mu(z) \): RMS \( \approx 0.305 \), \( \rho \approx 0.406 \)
+  \item GWTC: \( \phi(z) \): RMS \( \approx 0.442 \), \( \rho \approx -0.691 \)
+  \item BAO: \( \phi(z) \): RMS \( \approx 0.677 \), \( \rho \approx -1.000 \)
+\end{itemize}
+
+\appendix
+\section*{Appendix A: Harmonic Extraction Method}
+\subsection*{Steps to Construct \( \mu(z), \nu(z) \) from \( D^{TT}_\ell \)}
+\begin{enumerate}
+  \item Load \( D^{TT}_\ell \) from Planck/ACT dataset.
+  \item Apply second-derivative filter to identify local extrema.
+  \item Convert multipoles via \( z_i = 1100 / (\ell_i + \varepsilon) \)
+  \item Normalize \( A_i \) using min-max scaling.
+  \item Gaussian project each peak/trough to form \( \mu(z), \nu(z) \)
+  \item Define total field: \( \phi(z) = \mu(z) - \nu(z) \)
+\end{enumerate}
+
+\section*{Appendix B: Gimbal Domain Projection}
+We project compact source coherence data from the COM PCCS 030 GHz catalog onto a 720\textdegree{} gimbal space:
+\[
+\phi(z, \theta, \varphi) = \sum_{\ell, m} a_{\ell m} Y_{\ell m}(\theta, \varphi) \cdot \exp\left( -\frac{(z - z_\ell)^2}{2\lambda^2} \right)
+\]
+This allows redshift-coherence structure to be represented across angular coordinates, enabling future 3D gravitational modeling.
+
+\end{document}

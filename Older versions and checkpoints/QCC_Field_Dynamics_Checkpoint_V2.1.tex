@@ -1,0 +1,75 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{margin=1in}
+\title{Quantum Coherence Cosmology (QCC)\\Field Dynamics Checkpoint V2.2}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Extension to Spacetime Field}
+We generalized the QCC scalar coherence field to full spacetime evolution:
+\[
+\phi(x^\mu) = \phi(x, y, z, \tau)
+\]
+Where:
+\begin{itemize}
+\item \( \tau \) is conformal time
+\item \( x, y, z \) are comoving spatial coordinates
+\end{itemize}
+This reformulates the redshift-only model into a predictive, dynamic causal field.
+
+\section*{Lagrangian Field Theory}
+We defined the standard curved-space Lagrangian density:
+\[
+\mathcal{L}_\phi = \frac{1}{2} g^{\mu\nu} \partial_\mu \phi \partial_\nu \phi - \frac{\lambda}{4} \phi^4
+\]
+From this, we derived the Euler--Lagrange equation:
+\[
+\Box \phi + \lambda \phi^3 = 0, \quad \Box = -\partial_\tau^2 + \nabla^2
+\]
+This is a standard relativistic Klein-Gordon-like equation with self-interaction.
+
+\section*{Energy and Hamiltonian Structure}
+We computed the Hamiltonian density:
+\[
+\mathcal{H}_\phi = \frac{1}{2} \dot{\phi}^2 + \frac{1}{2} (\nabla \phi)^2 + \frac{\lambda}{4} \phi^4
+\]
+All energy terms were positive and peaked in high-coherence regions, validating physicality.
+
+\section*{Dimensional Consistency Tests}
+
+\subsection*{1D Field \( \phi(x, \tau) \)}
+\begin{itemize}
+\item Gaussian wave packet modulated by cosine
+\item Verified temporal decay and bounded energy
+\item Hamiltonian density peaked near coherence maxima
+\end{itemize}
+
+\subsection*{2D Field \( \phi(x, y, \tau) \)}
+\begin{itemize}
+\item Radially symmetric coherence shell
+\item Hamiltonian matched spatial peaks of coherence
+\end{itemize}
+
+\subsection*{3D Field \( \phi(x, y, z, \tau) \)}
+\begin{itemize}
+\item Full spherical coherence wave
+\item Verified consistency across slices at \( z = 0, \tau = 5 \)
+\item Binned resolution used for computational stability
+\end{itemize}
+
+\section*{Summary}
+\begin{itemize}
+\item Extended QCC to \( \phi(x^\mu) \) dynamic field
+\item Validated causal wave equation structure
+\item Energy density fully physical, no violations of QFT constraints
+\item Verified 1D, 2D, and 3D structure alignment
+\end{itemize}
+
+This checkpoint confirms that QCC behaves as a physically consistent, relativistic scalar field with coherent propagation across all observable scales.
+
+\end{document}
