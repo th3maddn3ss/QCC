@@ -22,15 +22,20 @@ Quantum Coherence Cosmology (QCC) is a cosmological model that replaces dark mat
 
 ```plaintext
 QCC Repository/
-├── Codebase/                         # Python notebooks and tools for processing QCC φ-field
-├── Datasets/                         # All cleaned cosmological datasets
-├── Older versions and Checkpoints/   # Dedicated folder for version history
-├── Plots/                            # Centralized spot for all plots and visual aids
-├── COM_PCCS_030_R2.04.txt            # Planck 030 GHz compact source catalog
-├── LICENSE                           # BSD 3-Clause License
-├── QCC_Preprint_V2.1A.tex            # Complete current LaTeX document of the QCC model full dynamic core
-├── QCC_Preprint_V2.1B.tex            # Initial commit of LaTeX document for QCC unified field core (unstable)
-└── README.md                         # Project overview and full theory log
+├── Codebase/ # Python notebooks and tools for QCC φ(z, τ) projection
+├── Datasets/ # All cleaned cosmological datasets (Pantheon+, KiDS, DR9Q, BAO, GWTC)
+├── Older versions and checkpoints/ # Archived versions like V2.1A and V2.1B
+├── Plots/ # Figures and coherence projection visualizations
+├── COM_PCCS_030_R2.04.txt # Planck 030 GHz compact source catalog
+├── LICENSE # BSD 3-Clause License
+├── QCC_PrePublish_V2.2A.tex # Main LaTeX document for final V2.2A release
+├── QCC_PrePublish_V2.2A.pdf # PDF version of the main preprint
+├── QCC_V2.2A_Model_Parameters.csv # Dataset parameters and kernel settings
+├── QCC_V2.2A_Physics_Validation.tex # Microcausality, energy bounds, and causal tests
+├── QCC_V2.2A_Reproducibility_Guide.tex # Toolkit usage and step-by-step rebuild instructions
+├── QCC_V2.2A_Statistical_Validation.tex # RMS, AIC, BIC, chi-squared, KS evaluation
+├── QCC_V2.2A_Unique_Predictions.tex # QCC-only predictions not explained by ΛCDM
+├── README.md # Project overview, logic, and links # Project overview and full theory log
 ```
 
 ---
