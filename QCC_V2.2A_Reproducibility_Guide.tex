@@ -1,0 +1,96 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, geometry, hyperref}
+\geometry{margin=1in}
+\title{QCC V2.2A Toolkit Usage and Reproducibility Guide}
+\author{Devin Lavrisha}
+\date{May 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Abstract}
+This document serves as a practical guide for researchers to reproduce the Quantum Coherence Cosmology (QCC) V2.2A model using the provided toolkit. It outlines installation requirements, dataset expectations, kernel projection steps, and RMS/statistical validation, ensuring full transparency and reproducibility of the published results.
+
+\section{Toolkit Overview}
+The QCC model is implemented in \texttt{QCC\_toolkit\_V2.1\_fixed.py}, which defines a dynamic scalar coherence field $\phi(z, \tau)$ and its projected kernel $K(z)$. This kernel is compared to redshift-distributed cosmological data to validate coherence-based structure formation.
+
+\subsection*{Class Structure}
+\begin{itemize}
+\item \texttt{QCCModel}: Initializes parameters, integrates $\phi(z, \tau)$ via Runge-Kutta.
+\item \texttt{project\_kernel(z)}: Projects the normalized kernel onto dataset redshift bins.
+\item \texttt{get\_kernel\_data()}: Returns raw $\phi$, $\phi'$, $\phi''$, and $K(z)$.
+\end{itemize}
+
+\section{Installation Requirements}
+\begin{itemize}
+\item Python 3.8+
+\item NumPy
+\item SciPy
+\item PyWavelets
+\item Matplotlib (optional)
+\end{itemize}
+
+Install with:
+\begin{verbatim}
+pip install numpy scipy pywt matplotlib
+\end{verbatim}
+
+\section{Dataset Format}
+Ensure cleaned CSV files are provided with these columns:
+\begin{itemize}
+\item \textbf{Pantheon+}: redshift (\texttt{redshift}), magnitude (\texttt{mB})
+\item \textbf{DR9Q}: redshift bin center (\texttt{z\_bin\_center}), quasar count
+\item \textbf{KiDS}: angle (\texttt{theta\_arcmin}), correlation (\texttt{xi\_plus})
+\item \textbf{GWTC}: redshift bin center, merger count
+\end{itemize}
+
+\section{Kernel Projection \& RMS Calculation}
+\begin{enumerate}
+\item Load the toolkit and model:
+\begin{verbatim}
+from QCC_toolkit_V2_1_fixed import QCCModel
+model = QCCModel(mode='dynamic')
+\end{verbatim}
+\item Project kernel onto redshift bins:
+\begin{verbatim}
+kernel_proj = model.project_kernel(dataset['z_column'])
+\end{verbatim}
+\item Compute RMS:
+\begin{verbatim}
+from sklearn.metrics import mean_squared_error
+rms = np.sqrt(mean_squared_error(normalized_data, kernel_proj))
+\end{verbatim}
+\end{enumerate}
+
+\section{Statistical Evaluation}
+The toolkit supports:
+\begin{itemize}
+\item Root Mean Squared Error (RMS)
+\item Akaike Information Criterion (AIC)
+\item Bayesian Information Criterion (BIC)
+\item Chi-Squared test ($\chi^2$)
+\item Kolmogorov–Smirnov test (KS)
+\end{itemize}
+
+\section{Expected Output Summary}
+\begin{tabular}{l|c}
+\textbf{Dataset} & \textbf{Expected RMS} \\
+\hline
+Pantheon+ & 0.215 \\
+DR9Q      & 0.568 \\
+KiDS      & 0.547 \\
+GWTC      & 0.527 \\
+\end{tabular}
+
+\section{Troubleshooting}
+\begin{itemize}
+\item \textbf{NaN output}: check redshift range.
+\item \textbf{Flat kernel}: verify wavelet normalization step.
+\item \textbf{Shape mismatch}: align redshift array to projected output.
+\end{itemize}
+
+\section*{Final Note}
+This document should accompany the core model, physics validation, and statistical analysis for full reproducibility of QCC V2.2A.
+
+\end{document}
