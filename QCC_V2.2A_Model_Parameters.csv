@@ -1,0 +1,6 @@
+parameter_name,value,description
+amplitude_A0,1.0,Amplitude of phi burst
+wavelength_lambda_phi,1.6,Wavelength of phi coherence field
+envelope_sigma,0.75,Envelope width of phi burst
+damping_gamma,0.02,Damping coefficient of phi evolution
+center_redshift_z0,1.0,Center redshift of the phi burst
