@@ -1,0 +1,65 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, hyperref, listings}
+\usepackage[a4paper, margin=1in]{geometry}
+\title{QCC Field Kernel Implementation and Projection Toolkit}
+\author{Devin Lavrisha}
+\date{June 2025}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document explains the numerical methods and implementation behind the projection of the QCC dynamic coherence kernel $K(z)$ used in $\sigma_8$ validation. The projection is based on a time-evolving scalar coherence field $\phi(z, \tau)$, integrated numerically via ordinary differential equations and normalized using a wavelet-based RMS technique. The source code is contained in the module \texttt{QCC\_toolkit\_V2.1\_fixed.py}.
+\end{abstract}
+
+\section{Overview}
+The QCC kernel projection models the evolution of a scalar coherence field $\phi(z, \tau)$ derived from early-universe quantum memory. This field drives lensing and structure formation in place of dark matter. We extract the projection kernel $K(z)$ using:
+\begin{equation}
+K(z) = \left( \frac{d\phi}{dz} \right)^2 + \left( \frac{d^2\phi}{dz^2} \right)^2
+\end{equation}
+
+\section{ODE Integration Method}
+The field $\phi(z)$ is evolved from an initial Gaussian-modulated sinusoidal condition:
+\begin{equation}
+\phi(z_0) = A_0 \exp\left( - \frac{(z - z_0)^2}{2 \sigma^2} \right) \sin\left( \frac{2\pi z}{\lambda_\phi} \right)
+\end{equation}
+The evolution is governed by a damped $\phi^4$ oscillator:
+\begin{equation}
+\frac{d^2\phi}{dz^2} + \gamma \frac{d\phi}{dz} + \phi^3 = 0
+\end{equation}
+This ODE is integrated using \texttt{scipy.integrate.solve\_ivp} with RK45.
+
+\section{Wavelet Normalization}
+To ensure consistent kernel energy across projections, the resulting $\phi(z)$ field is normalized using the RMS of its wavelet decomposition. We apply a Daubechies-4 wavelet with 3 levels:
+\begin{lstlisting}[language=Python]
+coeffs = pywt.wavedec(phi_vals, wavelet='db4', level=3)
+lambda_wavelet = np.sqrt(np.mean(np.concatenate(coeffs)**2))
+phi_vals /= lambda_wavelet
+phi_prime /= lambda_wavelet
+phi_double_prime /= lambda_wavelet
+\end{lstlisting}
+
+\section{Projection onto Observational Redshift Grid}
+Once $K(z)$ is computed, we interpolate it over a target redshift distribution (e.g., from KiDS):
+\begin{lstlisting}[language=Python]
+kernel_interp = interp1d(z_vals, kernel, fill_value="extrapolate")
+kernel_on_kids = kernel_interp(z_kids)
+kernel_scaled = kernel_on_kids * (np.max(sigma8_obs) / np.max(kernel_on_kids))
+\end{lstlisting}
+This produces a direct comparison between the QCC field kernel and observed $\sigma_8(z)$.
+
+\section{Canonical Parameters}
+The following parameter set is used for validation:
+\begin{itemize}
+  \item $A_0 = 2.5376 \times 10^{-3}$
+  \item $\lambda_\phi = 1.025$
+  \item $\sigma = 0.75$
+  \item $\gamma = 0.5$
+  \item $z_0 = 1.0$
+\end{itemize}
+
+\section*{Code Repository}
+\texttt{https://github.com/th3maddn3ss/QCC/}
+
+\end{document}
