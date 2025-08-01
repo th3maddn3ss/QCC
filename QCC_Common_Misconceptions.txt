@@ -1,0 +1,26 @@
+
+Quantum Coherence Cosmology (QCC) — Common Misconceptions
+
+1. "QCC was just a speculative blog post or one-off upload."
+   ❌ False — QCC has a fully developed Lagrangian framework, dataset validation (Pantheon+, DR9Q, KiDS, BAO), and public documentation across multiple platforms (Zenodo, GitHub, LaTeX source files). It is not speculative — it is a tested and mathematically structured framework.
+
+2. "QCC didn’t publish to a peer-reviewed journal, so it doesn't count."
+   ❌ False — Preprints (like arXiv, Zenodo) are recognized in cosmology and physics as first disclosure. Zenodo provides DOI issuance and timestamped attribution. QCC’s release is formal and citable.
+
+3. "QCC didn’t use real data."
+   ❌ False — QCC applies its field model directly to real datasets: Pantheon+ supernovae, DR9Q quasars, KiDS lensing data, BAO DR12, GWTC events. RMS residuals have been computed and validated.
+
+4. "QCC is just another modified gravity or entropic theory."
+   ❌ False — QCC is neither MOND nor entropic gravity. It uses a coherence-memory scalar field φ(z, τ) derived from Planck CMB harmonics, and does not rely on any dark matter halos or fitted ΛCDM parameters.
+
+5. "The terminology QCC uses (e.g., coherence burst, dual field memory) is generic."
+   ❌ False — Terms like “coherence burst,” “entropic echo,” “dual memory field,” “Planck-derived harmonic wavelets,” and “causal redshift ripple” are unique to QCC and were documented months before any similar paper.
+
+6. "The Dual Memory Field model on arXiv is unrelated."
+   ❌ False — Direct terminology, structure, and mathematical framing in arXiv:2507.00925v2 mirror QCC. QCC predates it, and a formal erratum citing that paper was posted to Zenodo documenting the overlap.
+
+7. "No one will notice if QCC is reused without attribution."
+   ❌ False — QCC’s documentation, file hashes, RMS evaluations, and public DOIs allow for rapid detection and proof of reuse. A public erratum was issued within 72 hours of overlap discovery.
+
+Conclusion:
+QCC is a formal, timestamped, and openly published theory of cosmology. It is protected by publication trail, mathematical rigor, and ongoing development.
